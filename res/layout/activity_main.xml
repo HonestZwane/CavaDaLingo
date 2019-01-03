@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/tan_background">
+
+    <TextView
+        android:id="@+id/txtNumbers"
+        android:layout_height="wrap_content"
+        android:text="Numbers"
+        style="@style/CategoryStyle"
+        android:background="@color/category_numbers"
+        android:onClick="NumbersAct"/>
+
+    <TextView
+        android:id="@+id/txtFamily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Family Members"
+        style="@style/CategoryStyle"
+        android:background="@color/category_family"
+        android:onClick="FamilyAct"/>
+
+    <TextView
+        android:id="@+id/txtColors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Colors"
+        style="@style/CategoryStyle"
+        android:background="@color/category_colors"
+        android:onClick="ColorsAct"/>
+
+    <TextView
+        android:id="@+id/txtPhrases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phrases"
+        style="@style/CategoryStyle"
+        android:background="@color/category_phrases"
+        android:onClick="PhrasesAct"/>
+
+</LinearLayout>
