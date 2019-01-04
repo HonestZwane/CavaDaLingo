@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:text="Numbers"
         style="@style/CategoryStyle"
-        android:background="@color/category_numbers"
-        android:onClick="NumbersAct"/>
+        android:background="@color/category_numbers" />
+    <!--android:onClick="NumbersAct"-->
+
 
     <TextView
         android:id="@+id/txtFamily"
