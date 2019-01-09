@@ -27,7 +27,7 @@ WordAdapter extends ArrayAdapter<Word> {
 
         View listItem = convertView;
         if (listItem == null)
-            listItem = LayoutInflater.from(getContext()).inflate(position, parent);
+            listItem = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
 
         TextView tEnglish = listItem.findViewById(R.id.txtEnglish);
         tEnglish.setText(currentWord.getwEnglish());

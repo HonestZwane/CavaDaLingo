@@ -2,6 +2,9 @@ package com.example.ntobekozwane.lingo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
@@ -9,5 +12,20 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
+
+        ArrayList<Word> words = new ArrayList<>();
+        words.add(new Word("hello", "Sawubona"));
+        words.add(new Word("how are you?", "Usaphila?"));
+        words.add(new Word("I am fime", "Ngiyaphila"));
+        words.add(new Word("thank you", "Ngiyabonga/Siyabonga"));
+        words.add(new Word("Good bye", "Usale/Uhambe kahle"));
+        words.add(new Word("Please", "Ngiyacela"));
+        words.add(new Word("Yes", "Yebo"));
+        words.add(new Word("No", "Cha/Hhayi"));
+        words.add(new Word("I am hungry", "Ngilambile"));
+
+        WordAdapter wdAdpt = new WordAdapter(this, words);
+        ListView rootV = findViewById(R.id.rootView);
+        rootV.setAdapter(wdAdpt);
     }
 }
