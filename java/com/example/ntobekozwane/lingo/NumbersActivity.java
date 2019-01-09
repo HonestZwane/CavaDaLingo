@@ -19,20 +19,19 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        //UserDictionary.Words words = new UserDictionary.Words();
+        ArrayList<Word> words = new ArrayList<>();
+        words.add(new Word("one", "kunye"));
+        words.add(new Word("two", "kubili"));
+        words.add(new Word("three", "kuthathu"));
+        words.add(new Word("four", "kune"));
+        words.add(new Word("five", "kuhlanu"));
+        words.add(new Word("six", "isthupha"));
+        words.add(new Word("seven", "iskhombisa"));
+        words.add(new Word("eight", "isishagalombili"));
+        words.add(new Word("nine", "isishagalolunye"));
+        words.add(new Word("ten", "ishumi"));
 
-        ArrayList<String> words = new ArrayList<>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
-
+        /*
         words.add("eleven");
         words.add("twelve");
         words.add("thirteen");
@@ -63,14 +62,17 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("thirty eight");
         words.add("thirty nine");
         words.add("forty");
+        */
 
         //the 2 lines below were for testing purposes only
         //Log.v("NumbersActivity", "word at index 1 is :" +words.get(0));
         //Log.v("NumbersActivity.class", "word at index 5 is :" +words.get(5));
 
-        ArrayAdapter<String> numbAdpt = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
-        GridView rootV = findViewById(R.id.rootView);
-        rootV.setAdapter(numbAdpt);
+        WordAdapter wdAdpt = new WordAdapter(this, words);
+
+        //ArrayAdapter<String> numbAdpt = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
+        ListView rootV = findViewById(R.id.rootView);
+        rootV.setAdapter(wdAdpt);
 
 
 
@@ -78,7 +80,6 @@ public class NumbersActivity extends AppCompatActivity {
 /*
         LinearLayout rootV = findViewById(R.id.rootView);
         //Part 1
-
         int wIndex = 0;
         while (wIndex <words.size())
         {
