@@ -1,8 +1,11 @@
 package com.example.ntobekozwane.lingo;
 
+import android.media.Image;
+
 public class Word {
     private String wEnglish;
     private String wZulu;
+    // private Image wPic;
 
     public Word(String pEnglish, String pZulu) {
         wEnglish = pEnglish;
@@ -18,4 +21,7 @@ public class Word {
     }
 
 
+    /*public void setwEnglish(String wEnglish) {
+        this.wEnglish = wEnglish;
+    }*/
 }

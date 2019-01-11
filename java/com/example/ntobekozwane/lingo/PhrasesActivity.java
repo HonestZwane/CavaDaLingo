@@ -16,7 +16,7 @@ public class PhrasesActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("hello", "Sawubona"));
         words.add(new Word("how are you?", "Usaphila?"));
-        words.add(new Word("I am fime", "Ngiyaphila"));
+        words.add(new Word("I am fine", "Ngiyaphila"));
         words.add(new Word("thank you", "Ngiyabonga/Siyabonga"));
         words.add(new Word("Good bye", "Usale/Uhambe kahle"));
         words.add(new Word("Please", "Ngiyacela"));
