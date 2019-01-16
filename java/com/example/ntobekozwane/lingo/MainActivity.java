@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent i = new Intent(this, FamilyActivity.class);
         startActivity(i);
+
     }
     public void ColorsAct(View view)
     {

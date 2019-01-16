@@ -14,16 +14,16 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one", "kunye"));
-        words.add(new Word("two", "kubili"));
-        words.add(new Word("three", "kuthathu"));
-        words.add(new Word("four", "kune"));
-        words.add(new Word("five", "kuhlanu"));
-        words.add(new Word("six", "isthupha"));
-        words.add(new Word("seven", "iskhombisa"));
-        words.add(new Word("eight", "isishagalombili"));
-        words.add(new Word("nine", "isishagalolunye"));
-        words.add(new Word("ten", "ishumi"));
+        words.add(new Word("one", "kunye", R.drawable.number_one));
+        words.add(new Word("two", "kubili", R.drawable.number_two));
+        words.add(new Word("three", "kuthathu", R.drawable.number_three));
+        words.add(new Word("four", "kune", R.drawable.number_four));
+        words.add(new Word("five", "kuhlanu", R.drawable.number_five));
+        words.add(new Word("six", "isthupha", R.drawable.number_six));
+        words.add(new Word("seven", "iskhombisa", R.drawable.number_seven));
+        words.add(new Word("eight", "isishagalombili", R.drawable.number_eight));
+        words.add(new Word("nine", "isishagalolunye", R.drawable.number_nine));
+        words.add(new Word("ten", "ishumi", R.drawable.number_ten));
 
         /*
         words.add("eleven");
@@ -62,7 +62,7 @@ public class NumbersActivity extends AppCompatActivity {
         //Log.v("NumbersActivity", "word at index 1 is :" +words.get(0));
         //Log.v("NumbersActivity.class", "word at index 5 is :" +words.get(5));
 
-        WordAdapter wdAdpt = new WordAdapter(this, words);
+        WordAdapter wdAdpt = new WordAdapter(this, words, R.color.category_numbers);
 
         //ArrayAdapter<String> numbAdpt = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
         ListView rootV = findViewById(R.id.rootView);
