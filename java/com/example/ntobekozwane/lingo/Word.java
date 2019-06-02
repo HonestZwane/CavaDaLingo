@@ -1,6 +1,7 @@
 package com.example.ntobekozwane.lingo;
 
 import android.media.Image;
+import android.media.MediaPlayer;
 
 public class Word {
     private String wEnglish;
@@ -9,15 +10,26 @@ public class Word {
     private int imageResId = NO_IMAGE;
     private static final int NO_IMAGE = -1;
 
+    private int wSoundId;
+
     public Word(String pEnglish, String pZulu) {
         wEnglish = pEnglish;
         wZulu = pZulu;
     }
 
-    public Word(String pEnglish, String pZulu, int pImageId) {
+    //this constructor takes 3 parameter, english, zulu and sound
+    public Word(String pEnglish, String pZulu, int soundResId) {
+        wEnglish = pEnglish;
+        wZulu = pZulu;
+        wSoundId = soundResId;
+    }
+
+    //this constructor takes 4 parameter, english, zulu image and sound
+    public Word(String pEnglish, String pZulu, int pImageId, int soundResId) {
         wEnglish = pEnglish;
         wZulu = pZulu;
         imageResId = pImageId;
+        wSoundId = soundResId;
     }
 
     public String getwEnglish() {
@@ -39,5 +51,9 @@ public class Word {
     //checks whether there is an image the word
     public boolean hasImage() {
         return imageResId != NO_IMAGE;
+    }
+
+    public int getwSoundId() {
+        return wSoundId;
     }
 }
